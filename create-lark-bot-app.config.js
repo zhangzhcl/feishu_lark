@@ -7,6 +7,7 @@ const tenantScopes = [
   'cardkit:card:read',
   'cardkit:card:write',
   'contact:contact.base:readonly',
+  'contact:user.employee_id:readonly',
   'docx:document.block:convert',
   'docx:document:readonly',
   'docx:document:write_only',
@@ -59,11 +60,14 @@ module.exports = {
       tenant: tenantScopes,
       user: [
         'offline_access',
+        'contact:user.employee_id:readonly',
         'docs:document.content:read',
         'im:chat:read',
         'im:message',
         'im:message:readonly',
         'im:message.send_as_user',
+        'im:message:update',
+        'im:resource',
       ],
     },
     events: {

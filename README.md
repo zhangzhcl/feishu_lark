@@ -19,9 +19,9 @@ Open the URL printed in the terminal, then scan and confirm it in Feishu or Lark
 
 ## Requested permissions
 
-The launcher uses the minimal bot preset and requests the following 49 scopes: 43 app-identity scopes and 6 user-identity scopes. The platform confirmation page is authoritative; an unavailable scope identifier may be ignored by the platform.
+The launcher uses the minimal bot preset and requests the following 53 scopes: 44 app-identity scopes and 9 user-identity scopes. The platform confirmation page is authoritative; an unavailable scope identifier may be ignored by the platform.
 
-### App identity (43)
+### App identity (44)
 
 | Permission | Scope |
 | --- | --- |
@@ -33,6 +33,7 @@ The launcher uses the minimal bot preset and requests the following 49 scopes: 4
 | Read cards | `cardkit:card:read` |
 | Create and update cards | `cardkit:card:write` |
 | Read basic contacts | `contact:contact.base:readonly` |
+| Read user employee IDs | `contact:user.employee_id:readonly` |
 | Convert text to document blocks | `docx:document.block:convert` |
 | Read documents | `docx:document:readonly` |
 | Edit documents | `docx:document:write_only` |
@@ -69,16 +70,19 @@ The launcher uses the minimal bot preset and requests the following 49 scopes: 4
 | Upload and retrieve IM resources | `im:resource` |
 | Read wiki nodes | `wiki:node:read` |
 
-### User identity (6)
+### User identity (9)
 
 | Permission | Scope |
 | --- | --- |
 | Maintain access to authorized data | `offline_access` |
+| Read user employee IDs | `contact:user.employee_id:readonly` |
 | Read document content | `docs:document.content:read` |
 | Read chats | `im:chat:read` |
 | Read and send messages | `im:message` |
 | Read messages | `im:message:readonly` |
 | Send messages as the user | `im:message.send_as_user` |
+| Update messages | `im:message:update` |
+| Upload and retrieve IM resources | `im:resource` |
 
 ### Event and callback
 
