@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "create": "node create-lark-bot-app.js"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.74.0"
+  }
+}

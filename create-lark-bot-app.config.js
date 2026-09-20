@@ -1,0 +1,78 @@
+const tenantScopes = [
+  'application:application:self_manage',
+  'application:bot.menu:write',
+  'application:bot.basic_info:read',
+  'application:app_slash_command:read',
+  'application:app_slash_command:write',
+  'cardkit:card:read',
+  'cardkit:card:write',
+  'contact:contact.base:readonly',
+  'docx:document.block:convert',
+  'docx:document:readonly',
+  'docx:document:write_only',
+  'drive:drive.metadata:readonly',
+  'im:app_feed_card:write',
+  'im:chat',
+  'im:chat:create',
+  'im:chat:read',
+  'im:chat:update',
+  'im:chat.members:bot_access',
+  'im:feed.flag:read',
+  'im:feed.flag:write',
+  'im:feed.shortcut:read',
+  'im:feed.shortcut:write',
+  'im:message',
+  'im:message:readonly',
+  'im:message:send_as_bot',
+  'im:message:send_as_user',
+  'im:message:send_multi_users',
+  'im:message:send_multi_depts',
+  'im:message:send_sys_msg',
+  'im:message:update',
+  'im:message:recall',
+  'im:message:urgent.status:write',
+  'im:message.group_at_msg:readonly',
+  'im:message.group_at_msg.include_bot:readonly',
+  'im:message.group_msg',
+  'im:message.group_msg.include_bot:read',
+  'im:message.p2p_msg:readonly',
+  'im:message.pins:read',
+  'im:message.pins:write_only',
+  'im:message.reactions:read',
+  'im:message.reactions:write_only',
+  'im:resource',
+  'wiki:node:read',
+];
+
+module.exports = {
+  source: 'feishu-lark-bot-setup',
+  createOnly: true,
+  appPreset: {
+    name: '机器人应用',
+    desc: '通过 Node SDK 一键创建的机器人应用',
+  },
+  addons: {
+    // Use the minimal bot base so the confirmation page presents only the
+    // scopes, event, and callback explicitly requested below.
+    preset: false,
+    scopes: {
+      tenant: tenantScopes,
+      user: [
+        'offline_access',
+        'docs:document.content:read',
+        'im:chat:read',
+        'im:message',
+        'im:message:readonly',
+        'im:message.send_as_user',
+      ],
+    },
+    events: {
+      items: {
+        tenant: ['im.message.receive_v1'],
+      },
+    },
+    callbacks: {
+      items: ['card.action.trigger'],
+    },
+  },
+};
