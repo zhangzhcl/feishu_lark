@@ -19,9 +19,9 @@ npm run create
 
 ## 将申请的权限
 
-启动程序使用最小机器人基座，共申请 53 项权限：44 项应用身份权限和 9 项用户身份权限。平台确认页为最终准则；若平台目录中不存在某个权限标识，平台可能会忽略它。
+启动程序使用最小机器人基座，共申请 61 项权限：47 项应用身份权限和 14 项用户身份权限。平台确认页为最终准则；若平台目录中不存在某个权限标识，平台可能会忽略它。
 
-### 应用身份权限（44 项）
+### 应用身份权限（47 项）
 
 | 权限说明 | 权限标识 |
 | --- | --- |
@@ -35,6 +35,7 @@ npm run create
 | 获取通讯录基本信息 | `contact:contact.base:readonly` |
 | 获取用户 user ID | `contact:user.employee_id:readonly` |
 | 转换文本为云文档块 | `docx:document.block:convert` |
+| 创建及编辑新版文档 | `docx:document` |
 | 查看新版文档 | `docx:document:readonly` |
 | 编辑新版文档 | `docx:document:write_only` |
 | 查看云空间文件元数据 | `drive:drive.metadata:readonly` |
@@ -69,20 +70,27 @@ npm run create
 | 发送、删除消息表情回复 | `im:message.reactions:write_only` |
 | 获取与上传图片或文件资源 | `im:resource` |
 | 查看知识空间节点信息 | `wiki:node:read` |
+| 查看、编辑和管理知识库 | `wiki:wiki` |
+| 查看知识库 | `wiki:wiki:readonly` |
 
-### 用户身份权限（9 项）
+### 用户身份权限（14 项）
 
 | 权限说明 | 权限标识 |
 | --- | --- |
 | 持续访问已授权的数据 | `offline_access` |
 | 获取用户 user ID | `contact:user.employee_id:readonly` |
 | 查看云文档内容 | `docs:document.content:read` |
+| 创建及编辑新版文档 | `docx:document` |
+| 查看新版文档 | `docx:document:readonly` |
 | 查看群信息 | `im:chat:read` |
 | 获取与发送单聊、群组消息 | `im:message` |
 | 获取单聊、群组消息 | `im:message:readonly` |
 | 以用户身份发送消息 | `im:message.send_as_user` |
 | 更新消息 | `im:message:update` |
 | 获取与上传图片或文件资源 | `im:resource` |
+| 查看知识空间节点信息 | `wiki:node:read` |
+| 查看、编辑和管理知识库 | `wiki:wiki` |
+| 查看知识库 | `wiki:wiki:readonly` |
 
 ### 事件与回调
 

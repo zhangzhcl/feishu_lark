@@ -19,9 +19,9 @@ Open the URL printed in the terminal, then scan and confirm it in Feishu or Lark
 
 ## Requested permissions
 
-The launcher uses the minimal bot preset and requests the following 53 scopes: 44 app-identity scopes and 9 user-identity scopes. The platform confirmation page is authoritative; an unavailable scope identifier may be ignored by the platform.
+The launcher uses the minimal bot preset and requests the following 61 scopes: 47 app-identity scopes and 14 user-identity scopes. The platform confirmation page is authoritative; an unavailable scope identifier may be ignored by the platform.
 
-### App identity (44)
+### App identity (47)
 
 | Permission | Scope |
 | --- | --- |
@@ -35,6 +35,7 @@ The launcher uses the minimal bot preset and requests the following 53 scopes: 4
 | Read basic contacts | `contact:contact.base:readonly` |
 | Read user employee IDs | `contact:user.employee_id:readonly` |
 | Convert text to document blocks | `docx:document.block:convert` |
+| Create and edit documents | `docx:document` |
 | Read documents | `docx:document:readonly` |
 | Edit documents | `docx:document:write_only` |
 | Read Drive metadata | `drive:drive.metadata:readonly` |
@@ -69,20 +70,27 @@ The launcher uses the minimal bot preset and requests the following 53 scopes: 4
 | Manage message reactions | `im:message.reactions:write_only` |
 | Upload and retrieve IM resources | `im:resource` |
 | Read wiki nodes | `wiki:node:read` |
+| Read, edit, and manage wikis | `wiki:wiki` |
+| Read wikis | `wiki:wiki:readonly` |
 
-### User identity (9)
+### User identity (14)
 
 | Permission | Scope |
 | --- | --- |
 | Maintain access to authorized data | `offline_access` |
 | Read user employee IDs | `contact:user.employee_id:readonly` |
 | Read document content | `docs:document.content:read` |
+| Create and edit documents | `docx:document` |
+| Read documents | `docx:document:readonly` |
 | Read chats | `im:chat:read` |
 | Read and send messages | `im:message` |
 | Read messages | `im:message:readonly` |
 | Send messages as the user | `im:message.send_as_user` |
 | Update messages | `im:message:update` |
 | Upload and retrieve IM resources | `im:resource` |
+| Read wiki nodes | `wiki:node:read` |
+| Read, edit, and manage wikis | `wiki:wiki` |
+| Read wikis | `wiki:wiki:readonly` |
 
 ### Event and callback
 

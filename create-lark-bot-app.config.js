@@ -9,6 +9,7 @@ const tenantScopes = [
   'contact:contact.base:readonly',
   'contact:user.employee_id:readonly',
   'docx:document.block:convert',
+  'docx:document',
   'docx:document:readonly',
   'docx:document:write_only',
   'drive:drive.metadata:readonly',
@@ -43,6 +44,8 @@ const tenantScopes = [
   'im:message.reactions:write_only',
   'im:resource',
   'wiki:node:read',
+  'wiki:wiki',
+  'wiki:wiki:readonly',
 ];
 
 module.exports = {
@@ -62,12 +65,17 @@ module.exports = {
         'offline_access',
         'contact:user.employee_id:readonly',
         'docs:document.content:read',
+        'docx:document',
+        'docx:document:readonly',
         'im:chat:read',
         'im:message',
         'im:message:readonly',
         'im:message.send_as_user',
         'im:message:update',
         'im:resource',
+        'wiki:node:read',
+        'wiki:wiki',
+        'wiki:wiki:readonly',
       ],
     },
     events: {
